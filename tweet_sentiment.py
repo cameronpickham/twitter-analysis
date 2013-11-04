@@ -11,11 +11,11 @@ def main():
     term, score = line.split("\t")
     scores[term] = int(score)
     
-    for line in tweets:
-      tweet = json.loads(line)
-      if 'text' in tweet:
-        text = tweet['text'].lower()
-        tweet_text.append(text.encode('utf-8'))
+  for line in tweets:
+    tweet = json.loads(line)
+    if 'text' in tweet:
+      text = tweet['text'].lower()
+      tweet_text.append(text.encode('utf-8'))
 
     for t in tweet_text:
       sentiment = 0
