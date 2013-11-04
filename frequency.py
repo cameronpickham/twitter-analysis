@@ -7,7 +7,6 @@ def main():
   term_dict = {}
   term_total = 0
 
-	# Load terms into dictionary mapping (term, count)
   for line in tweets:
     tweet = json.loads(line)
     if 'text' in tweet:
@@ -19,7 +18,6 @@ def main():
           term_dict[term] = 1
         term_total += 1
 
-	# Print dictionary
   for x in sorted(term_dict, key=term_dict.get):
     print x, ' ', term_dict[x]/term_total
 
