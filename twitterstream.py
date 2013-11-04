@@ -1,7 +1,6 @@
 import oauth2 as oauth
 import urllib2 as urllib
 import json
-import codecs
 
 file = open('twitter_dev.json', 'r')
 config = json.loads(file.read())
